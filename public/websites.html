@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unapothecary's terminal</title>
+    <link rel="icon" type="image/x-icon" href="design/computer.ico">
+    
+<style>
+@font-face {
+  font-family: Fixedsys;
+  src: url('design/Fixedsys.ttf');
+    }
+    
+* {
+  cursor: url("design/greencursor.png"), default;
+    }
+    
+body {
+  cursor: url("design/greencursor.png"), default;
+  font-family: 'Fixedsys';
+  margin: 100px;
+  background-color: #111111;
+  color: #00C000
+    }
+  
+hr {
+  border-color: #00C000
+    }
+  
+a {
+  cursor: url("design/greencursor.png"), default;
+  text-decoration: none;
+  color: #00FF00
+    }
+  
+a:hover { 
+  cursor: url("design/greencursor.png"), default;
+  background-color: #00FF00;
+  color: #111111;
+    }
+    
+::-moz-selection {
+  color: #111111;
+  background: #00C000;
+}
+
+::selection {
+  color: #111111;
+  background: #00C000;
+}
+</style>
+    
+  </head>
+  
+<body>
+<pre style="text-align: center;">
+ __  __     __   __     ______     ______   ______     ______   __  __     ______     ______     ______     ______     __  __    
+/\ \/\ \   /\ "-.\ \   /\  __ \   /\  == \ /\  __ \   /\__  _\ /\ \_\ \   /\  ___\   /\  ___\   /\  __ \   /\  == \   /\ \_\ \   
+\ \ \_\ \  \ \ \-.  \  \ \  __ \  \ \  __/ \ \ \/\ \  \/_/\ \/ \ \  __ \  \ \  __\   \ \ \____  \ \  __ \  \ \  __<   \ \____ \  
+ \ \_____\  \ \_\\"\_\  \ \_\ \_\  \ \_\    \ \_____\    \ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\ \_\  \ \_\ \_\  \/\_____\ 
+  \/_____/   \/_/ \/_/   \/_/\/_/   \/_/     \/_____/     \/_/   \/_/\/_/   \/_____/   \/_____/   \/_/\/_/   \/_/ /_/   \/_____/ 
+</pre>
+<h1 style="text-align:center">
+ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM<br>
+COPYRIGHT 2075-2077 ROBCO INDUSTRIES<br>
+-Server 666-<br>
+</h1>
+<h2>Link Directory - Welcome, Courier.</h2>
+<h3>All websites and media on this page are free to access!</h3>
+<hr>
+<p style="float: right;">Current link count: <span id="link-count" style="color: #00FF00;"></span></p>
+<a target="_self" href="index.html">>> RETURN</a>
+<br>
+<br>
+
+<script>
+function calculateLinkCount() {
+  var divElement = document.getElementById('links');
+  if (divElement) {
+    var links = divElement.getElementsByTagName('a');
+    return links.length;
+  } else {
+    return 0;
+  }
+}
+
+function updateLinkCount() {
+  var linkCountElement = document.getElementById('link-count');
+  if (linkCountElement) {
+    linkCountElement.textContent = calculateLinkCount();
+  }
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  updateLinkCount();
+});
+
+var newLink = document.createElement('a');
+newLink.href = 'https://example.com';
+newLink.textContent = 'New Link';
+
+var targetDiv = document.getElementById('links');
+
+if (targetDiv) {
+  targetDiv.appendChild(newLink);
+}
+
+updateLinkCount();
+</script>
+
+<div id="links">
+
+<p>[ M O V I E S / S H O W S ]</p>
+  <a target="_blank" href="https://soap2dayhd.com/">> Soap2day</a> // streaming site. use an <a target="_blank" href="https://ublockorigin.com/">adblocker.</a><br>
+  <a target="_blank" href="https://fmovies24.to/">> Fmovies</a> // another streaming site.<br>
+  <a target="_blank" href="https://ihavenotv.com/">> ihavenotv.com</a> // documentaries.<br>
+  <a target="_blank" href="https://www.historicfilms.com/">> Historic Films</a> // historical videos and musical performances.<br>
+  <a target="_blank" href="https://www.myretrotvs.com">> MyRetroTVs</a> // channel surf through any decade.<br>
+  <a target="_blank" href="http://www.starringthecomputer.com">> Starring the Computer</a> // computers in movies and shows.<br>
+  <a target="_blank" href="https://film-grab.com">> FILMGRAB</a> // stills from films.<br>
+  <a target="_blank" href="https://www.filmonpaper.com/">> Film On Paper</a> // vintage movie poster archive.<br>
+  <a target="_blank" href="https://www.tunefind.com">> Tunefind</a> // find out what song was played in a movie or show.<br>
+  <a target="_blank" href="https://wornontv.net">> Worn On TV</a> // shop outfits seen on TV.<br>
+  <a target="_blank" href="https://www.shopyourtv.com">> ShopYourTV</a> // shop more outfits seen on TV.<br>
+<p>[ G A M E S ]</p>
+  <a target="_blank" href="https://steamdb.info">> SteamDB</a> // database of steam games.<br>
+  <a target="_blank" href="https://vimm.net">> Vimm's Lair</a> // download ROMs and emulators.<br>
+  <a target="_blank" href="https://www.myabandonware.com/">> My Abandonware</a> // download retro games for free.<br>
+  <a target="_blank" href="https://fitgirl-repacks.site/">> FitGirl Repacks</a> // download games for free.<br>
+  <a target="_blank" href="https://anadius.su/">> anadius</a> // download The Sims 4 DLC's for free.<br>
+  <a target="_blank" href="https://hacks.guide">> hacks.guide</a> // guide to modding your 3DS.<br>
+  <a target="_blank" href="https://www.pspunk.com">> pspunk</a> // guide to modding your PSP.<br>
+  <a target="_blank" href="https://themeplaza.art/themes">> Theme Plaza</a> // wallpapers and splashes for your modded 3DS.<br>
+  <a target="_blank" href="https://consolevariations.com">> ConsoleVariations.com</a> // console database.<br>
+  <a target="_blank" href="http://pica-pic.com">> Pica Pic</a> // showcase of handheld consoles.<br>
+  <a target="_blank" href="http://femicom.org/">> Femicom</a> // showcase of games made for girls!<br>
+  <a target="_blank" href="https://noclip.website">> noclip</a> // explore game maps.<br>
+  <a target="_blank" href="https://lostgamer.io/">> lostgamer.io</a> // GeoGuessr but for game maps.<br>
+  <a target="_blank" href="https://www.gamingalexandria.com/wp/">> Gaming Alexandria</a> // game preservation and history.<br>
+  <a target="_blank" href="https://www.spriters-resource.com/">> The Spriters Resource</a> // sprites.<br>
+  <a target="_blank" href="http://thecoverproject.net">> The Cover Project</a> // game case covers.<br>
+  <a target="_blank" href="https://www.titlescream.com/">> Title Scream</a> // retro game title screens.<br>
+  <a target="_blank" href="https://www.flyerfever.com/">> Flyer Fever</a> // retro game posters.<br>
+  <a target="_blank" href="https://pkmncards.com">> PkmnCards</a> // pokemon card archive.<br>
+  <a target="_blank" href="https://pokemonboosterpack.com">> Pokemon Booster Pack Simulator</a> // open a fake booster pack broke ass mf<br>
+  <a target="_blank" href="https://vgsmproject.com">> The Video Game Soda Machine Project</a> // catalogue of vending machines in video games.<br>
+  <a target="_blank" href="https://deathgenerator.com/#gallery">> The Death Generator</a> // add your own text to video game death screens.<br>
+  <a target="_blank" href="https://maple.pet/webgbcam/">> webgbcam</a> // gameboy camera filter.<br>
+<p>[ M U S I C ]</p>
+  <a target="_blank" href="https://somafm.com">> SomaFM</a> // commercial-free radio stations with 30+ different genres.<br>
+  <a target="_blank" href="https://nightride.fm/">> Nightride FM</a> // synthwave and retrowave radio stations.<br>
+  <a target="_blank" href="https://rekt.network/">> Rekt Network</a> // 30's/40's fallout style and cyberpunk radio stations.<br>
+  <a target="_blank" href="https://plaza.one">> Nightwave Plaza</a> // vaporwave radio.<br>
+  <a target="_blank" href="https://vaporarchive.neocities.org">> Vaporwave Archive</a> // vaporwave archive and music player.<br>
+  <a target="_blank" href="https://poolsuite.net">> Poolsuite</a> // vaporwave playlist and aesthetics.<br>
+  <a target="_blank" href="http://radio.garden/visit/">> radio.garden</a> // listen to radio stations anywhere in the world.<br>
+  <a target="_blank" href="https://radiooooo.com">> Radiooooo</a> // listen to radio stations from any decade.<br>
+  <a target="_blank" href="https://everynoise.com">> Every Noise at Once</a> // discover new genres of music.<br>
+  <a target="_blank" href="http://music.ishkur.com">> Ishkur's Guide to Electronic Music</a> // discover new electronic music.<br>
+  <a target="_blank" href="http://thenostalgiamachine.com">> Nostalgia Machine</a> // listen to music from any year of your childhood.<br>
+  <a target="_blank" href="https://forgotify.com/">> Forgotify</a> // listen to a song that has never been listened to before.<br>
+  <a target="_blank" href="https://www.broadcastify.com">> Broadcastify</a> // listen to police, fire, and EMS radio.<br>
+  <a target="_blank" href="https://mynoise.net/noiseMachines.php">> MyNoise</a> // customizable background noise.<br>
+  <a target="_blank" href="https://www.tree.fm">> tree.fm</a> // forest background noise.<br>
+  <a target="_blank" href="https://www.rainymood.com">> Rainy Mood</a> // rain background noise.<br>
+  <a target="_blank" href="http://www.effectgames.com/demos/canvascycle/">> Canvas Cycle</a> // background noise with cute pixel art.<br>
+  <a target="_blank" href="https://www.whosampled.com">> WhoSampled</a> // find out where songs are sampled from.<br>
+<p>[ B O O K S ]</p>
+  <a target="_blank" href="https://libbyapp.com/">> Libby</a> // access ebooks and audiobooks for free with a library card. support ur local library... or else...<br>
+  <a target="_blank" href="https://annas-archive.org/">> Anna's Archive</a> // ebook library.<br>
+  <a target="_blank" href="https://z-lib.io/">> Z-Library</a> // ebook library.<br>
+  <a target="_blank" href="https://www.gutenberg.org">> Project Gutenberg</a> // ebook library.<br>
+  <a target="_blank" href="https://openlibrary.org">> Open Library</a> // ebook library from The Internet Archive.<br>
+  <a target="_blank" href="https://librivox.org/">> LibriVox</a> // audiobooks.<br>
+  <a target="_blank" href="http://libgen.rs">> LibGen</a> // download college textbooks for free.<br>
+  <a target="_blank" href="https://sci-hub.se">> Sci-Hub</a> // access scientific and academic articles for free.<br>
+  <a target="_blank" href="https://readcomicsonline.ru">> Read Comics Online</a> // read comic books online.<br>
+  <a target="_blank" href="https://readcomiconline.li/">> Read Comic Online</a> // more comics.<br>
+  <a target="_blank" href="https://daggermag.com">> DaggerMag</a> // cool zine.<br>
+  <a target="_blank" href="https://www.etymonline.com">> Etymonline</a> // research the origins of words.<br>
+  <a target="_blank" href="https://phrontistery.info/index.html">> The Phrontistery</a> // compendium of rare, lost, and forgotten words.<br>
+  <a target="_blank" href="https://www.merriam-webster.com/time-traveler/">> Time Traveler by Merriam-Webster</a> // see which words were added to the dictionary each year.<br>
+  <a target="_blank" href="https://brians.wsu.edu/common-errors/">> Common Errors in English Usage</a> // common errors in the English language.<br>
+  <a target="_blank" href="http://fantastic.library.cornell.edu">> The Fantastic in Art and Fiction</a> // tribute to the supernatural in fiction from Cornell.<br>
+  <a target="_blank" href="https://12ft.io">> 12ft Ladder</a> // use this to bypass paywalls on news articles.<br>
+<p>[ I N T E R N E T ]</p>
+  <a target="_blank" href="https://archive.org">> Internet Archive</a> // archives of movies, music, books, etc. home of the wayback machine.<br>
+  <a target="_blank" href="https://osintframework.com">> OSINT Framework</a> // online tools and resources.<br>
+  <a target="_blank" href="https://search.marginalia.nu">> Marginalia</a> // search for non-commercial sites you can't easily find on Google.<br>
+  <a target="_blank" href="https://wiby.me">> Wiby</a> // search for old websites.<br>
+  <a target="_blank" href="https://vhs.neocities.org">> VHSearch</a> // search for neocities sites.<br>
+  <a target="_blank" href="https://boardreader.com">> boardreader</a> // search for forums and message boards.<br>
+  <a target="_blank" href="https://same.energy">> Same Energy</a> // cool similar image search.<br>
+  <a target="_blank" href="https://oldweb.today/#19960101/http://geocities.com/">> oldweb.today</a> // emulate old internet browsers.<br>
+  <a target="_blank" href="https://www.webdesignmuseum.org">> Web Design Museum</a> // brand's old websites.<br>
+  <a target="_blank" href="https://www.404pagefound.com">> 404pagefound</a> // active retro websites.<br>
+  <a target="_blank" href="https://websitesfromhell.net">> websites from hell</a> // websites with really good layouts.<br>
+  <a target="_blank" href="https://geocities.restorativland.org">> The GeoCities Gallery</a> // neighborhood of GeoCities sites.<br>
+  <a target="_blank" href="http://www.oocities.org/#gsc.tab=0">> oocities</a> // another GeoCities neighborhood.<br>
+  <a target="_blank" href="https://www.cameronsworld.net">> Cameron's World</a> // a tribute to GeoCities.<br>
+  <a target="_blank" href="https://simone.computer/#/webdesktops">> Simone's Computer</a> // a directory of sites that look like operating systems.<br>
+  <a target="_blank" href="https://www.nintendo.co.jp/n01/index.html">> nintendo.co.jp</a> // old websites dedicated to nintendo games.<br>
+  <a target="_blank" href="https://forum.agoraroad.com/index.php?media/">> Agora Road's Macintosh Cafe</a> // vaporwave forum.<br>
+  <a target="_blank" href="https://webamp.org/">> Webamp</a> // Winamp in your browser.<br>
+  <a target="_blank" href="https://ascii.co.uk">> ASCII.co.uk</a> // ASCII art.<br>
+  <a target="_blank" href="https://www.asciiart.eu">> ASCII Art Archive</a> // ASCII art.<br>
+  <a target="_blank" href="http://www.ascii-art.de">> ASCII Art Dictionary</a> // ASCII art.<br>
+  <a target="_blank" href="https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20">> ASCII Text Generator</a> // generate ASCII art from text.<br>
+<p>[ C O M P U T E R S ]</p>
+  <a target="_blank" href="https://pcpartpicker.com/">> PCPartPicker</a> // build a PC and compare parts.<br>
+  <a target="_blank" href="https://copy.sh/v86/">> Virtual x86</a> // emulate different desktop operating systems.<br>
+  <a target="_blank" href="https://www.windows93.net">> WINDOWS93</a> // emulate old Windows OS.<br>
+  <a target="_blank" href="https://winxp.vercel.app/">> WinXP</a> // emulate Windows XP.<br>
+  <a target="_blank" href="https://infinitemac.org/1996/System%207.5.3">> Infinite Mac</a> // emulate old Mac OS.<br>
+  <a target="_blank" href="https://www.pcjs.org">> PCjs Machines</a> // emulate old machines and computers.<br>
+  <a target="_blank" href="hhttp://www.old-computers.com/">> old-computers.com</a> // retro computer archive.<br>
+  <a target="_blank" href="https://oldcomputers.net">> Steve's Computer Collection</a> // retro computer archive.<br>
+  <a target="_blank" href="https://www.mobilephonemuseum.com/">> Mobile Phone Museum</a> // retro phone archive.<br>
+  <a target="_blank" href="http://hw-museum.cz">> Hardware Museum</a> // hardware archive.<br>
+  <a target="_blank" href="https://obsoletemedia.org">> Museum of Obsolete Media</a> // obsolete media archive.<br>
+  <a target="_blank" href="https://winworldpc.com/home">> WinWorld</a> // retro software archive.<br>
+  <a target="_blank" href="https://guidebookgallery.org/index">> GUIdebook</a> // retro user interfaces archive.<br>
+  <a target="_blank" href="http://toastytech.com/index.html">> Nathan's Toasty Technology Page</a> // old web nostalgia.<br>
+  <a target="_blank" href="http://www.therestartpage.com">> The Restart Page</a> // experience rebooting old operating systems.<br>
+<p>[ D A T A B A S E S / A R C H I V E S ]</p>
+  <a target="_blank" href="https://www.cia.gov/readingroom/">> FOIA Electronic Reading Room</a> // declassified CIA documents.<br>
+  <a target="_blank" href="https://www.theblackvault.com/documentarchive/">> The Black Vault</a> // FOIA documents and paranormal case files.<br>
+  <a target="_blank" href="https://wikileaks.org/">> WikiLeaks</a> // leaked documents.<br>
+  <a target="_blank" href="https://www.snopes.com/">> Snopes</a> // fact-checking.<br>
+  <a target="_blank" href="https://www.bellingcat.com/">> bell¿ngcat</a> // fact-checking and open-source intelligence.<br>
+  <a target="_blank" href="https://littlesis.org">> littlesis</a> // see connections between politicians and corporations.<br>
+  <a target="_blank" href="https://www.judyrecords.com">> judyrecords</a> // search court cases.<br>
+  <a target="_blank" href="https://www.doenetwork.org">> Doe Network</a> // cases of missing and unidentified people.<br>
+  <a target="_blank" href="https://www.clinicaltrials.gov/">> ClinicalTrials.gov</a> // search clinical trials conducted anywhere in the world.<br>
+  <a target="_blank" href="https://openpaymentsdata.cms.gov">> OpenPayments.gov</a> // see payments made by drug companies to physicians.<br>
+  <a target="_blank" href="https://www.erowid.org/splash.php">> Erowid</a> // information about drugs.<br>
+  <a target="_blank" href="https://histography.io/">> Histography</a> // interactive timeline of history with Wikipedia links.<br>
+  <a target="_blank" href="https://mcn.edu/a-guide-to-virtual-museum-resources/">> Ultimate Guide to Virtual Museum Resources</a> // lots of virtual museum tours and collections.<br>
+  <a target="_blank" href="https://www.familysearch.org/en/united-states/">> FamilySearch</a> // genealogy/ancestry search tool. like ancestry.com but free.<br>
+  <a target="_blank" href="https://www.findagrave.com">> Find a Grave</a> // search cemetery records.<br>
+  <a target="_blank" href="https://www.housecreep.com">> Housecreep</a> // discover houses where murder, crime, and historical events occurred.<br>
+  <a target="_blank" href="https://alternativeto.net">> AlternativeTo</a> // find alternatives to popular software.<br>
+  <a target="_blank" href="https://tvtropes.org">> TV Tropes</a> // television tropes and clichés.<br>
+  <a target="_blank" href="https://cari.institute">> CARI</a> // catalogue of aesthetics.<br>
+  <a target="_blank" href="http://www.occultopedia.com">> Occultopedia</a> // the occult and the unexplained.<br>
+  <a target="_blank" href="https://scp-wiki.wikidot.com">> SCP Foundation</a> // [REDACTED]<br>
+  <a target="_blank" href="http://textfiles.com">> T E X T F I L E S D O T C O M</a> // file library.<br>
+  <a target="_blank" href="https://the-eye.eu/">> The Eye</a> // another file library.<br>
+  <a target="_blank" href="https://theswissbay.ch/pdf/">> The Swiss Bay</a> // another file library.<br>
+  <a target="_blank" href="https://www.annarchive.com">> A/N/N/A/R/C/H/I/V/E</a> // old technology media, manuals, and guides.<br>
+  <a target="_blank" href="https://www.advertisingarchives.co.uk/">> Advertising Archives</a> // vintage advertisements.<br>
+  <a target="_blank" href="https://ikeamuseum.com/en/digital/ikea-catalogues-through-the-ages/">> IKEA Catalogues</a> // vintage IKEA catalogues.<br>
+<p>[ P R O G R A M M I N G / T E C H N O L O G Y ]</p>
+  <a target="_blank" href="https://www.gale.com/elearning/udemy">> Udemy</a> // access online courses for free with a library card. fuck coursera all my homies hate coursera<br>
+  <a target="_blank" href="https://www.professormesser.com/">> Professor Messer</a> // educational IT/computer security videos.<br>
+  <a target="_blank" href="https://ocw.mit.edu/">> MIT OpenCourseWare</a> // online tech courses from MIT.<br>
+  <a target="_blank" href="https://skillsforall.com/">> Skills For All</a> // online IT courses from Cisco.<br>
+  <a target="_blank" href="https://linuxjourney.com/">> Linux Journey</a> // Linux tutorials.<br>
+  <a target="_blank" href="https://www.freecodecamp.org">> freeCodeCamp</a> // coding tutorials.<br>
+  <a target="_blank" href="https://www.theodinproject.com">> The Odin Project</a> // project-based JavaScript tutorials.<br>
+  <a target="_blank" href="https://www.w3schools.com">> W3 Schools</a> // coding references and guides.<br>
+  <a target="_blank" href="https://developer.mozilla.org/en-US/">> MDN Web Docs</a> // references and guides from Mozilla <3.<br>
+<p>[ W E B &nbsp;D E S I G N ]</p>
+  <a target="_blank" href="https://www.dafont.com">> DaFont</a> // fonts.<br>
+  <a target="_blank" href="https://int10h.org/oldschool-pc-fonts/fontlist/">> The Oldschool PC Font Resource</a> // retro 8-bit fonts.<br>
+  <a target="_blank" href="https://www.cursors-4u.com">> Cursors 4U</a> // cursors.<br>
+  <a target="_blank" href="https://www.totallyfreecursors.com">> Totally Free Cursors</a> // more cursors.<br>
+  <a target="_blank" href="https://www.w3schools.com/colors/colors_picker.asp">> HTML Color Picker</a> // HEX color picker.<br>
+  <a target="_blank" href="https://imagecolorpicker.com">> Image Color Picker</a> // image color picker.<br>
+  <a target="_blank" href="https://webneko.net/">> Web Neko</a> // Neko the cat code snippet. i cant get it to work on my site but hopefully yall are luckier than me<br>
+  <a target="_blank" href="https://dokode.moe/blogs/howto-winamp">> How to Embed WINAMP on Your Website</a> // Winamp embed for your website.<br>
+  <a target="_blank" href="https://skins.webamp.org/">> Winamp Skin Museum</a> // Winamp/Webamp skins.<br>
+  <a target="_blank" href="https://jdan.github.io/98.css/">> 98.css</a> // Windows 98 CSS framework.<br>
+  <a target="_blank" href="https://botoxparty.github.io/XP.css/">> XP.css</a> // Windows XP CSS framework.<br>
+  <a target="_blank" href="https://khang-nd.github.io/7.css/">> 7.css</a> // Windows 7 CSS framework.<br>
+  <a target="_blank" href="https://nostalgic-css.github.io/NES.css/#">> NES.css</a> // NES inspired CSS framework.<br>
+<p>[ G R A P H I C S ]</p>
+  <a target="_blank" href="https://gifcities.org">> GifCities</a> // graphics search engine from GeoCities.<br>
+  <a target="_blank" href="https://www.glitter-graphics.com">> Glitter Graphics</a> // graphics.<br>
+  <a target="_blank" href="https://99gifshop.neocities.org">> 99GIF Shop</a> // graphics.<br>
+  <a target="_blank" href="https://bettysgraphics.neocities.org">> Betty's Graphics</a> // graphics.<br>
+  <a target="_blank" href="https://graphic.neocities.org">> Bonnibel's Graphic Collection</a> // graphics.<br>
+  <a target="_blank" href="http://jansgraphics.com">> Jan's Graphics</a> // graphics.<br>
+  <a target="_blank" href="https://members.tripod.com/darkwolf_grafix/index.html">> Dark Wolf</a> // graphicsssssss.<br>
+  <a target="_blank" href="https://cyber.dabamos.de/88x31/index.html">> The 88x31 Gif Collection</a> // 88x31 buttons.<br>
+  <a target="_blank" href="https://88by31.neocities.org">> My Buttons World</a> // 88x31 buttons.<br>
+  <a target="_blank" href="https://buttonwall.neocities.org">> Button Wall</a> // 88x31 buttons.<br>
+  <a target="_blank" href="https://buttoncollection.neocities.org">> Internet Button Archive</a> // 88x31 buttons.<br>
+  <a target="_blank" href="https://anlucas.neocities.org/88x31Buttons">> AN Lucas's 88x31 Button Collection</a> // 88x31 buttons.<br>
+  <a target="_blank" href="http://blinkieobsession.freeservers.com/menu.html">> Blinkie Obsession</a> // blinkies.<br>
+  <a target="_blank" href="https://blinkies.cafe">> blinkies.cafe</a> // blinkies.<br>
+  <a target="_blank" href="https://web.badges.world">> Web Badges World</a> // web badges.<br>
+  <a target="_blank" href="https://sh2.us/buttons/">> Web Buttons</a> // web badges.<br>
+  <a target="_blank" href="http://www.acasystems.com/en/button-maker//">> Brilliant Button Maker</a> // web badge maker.<br>
+  <a target="_blank" href="https://textures.neocities.org">> TextureTown</a> // tileable backgrounds.<br>
+  <a target="_blank" href="https://hekate2.github.io/website-tools/index.html">> Backgrounds Archive 1</a> // tileable backgrounds.<br>
+  <a target="_blank" href="http://backgroundsarchive.com/tiles/">> Backgrounds Archive 2</a> // tileable backgrounds.<br>
+  <a target="_blank" href="http://www.freebackgrounds.com">> FreeBackgrounds.com</a> // tileable backgrounds.<br>
+  <a target="_blank" href="https://win98icons.alexmeub.com">> Windows 98 Icon Viewer</a> // old Windows icons.<br>
+  <a target="_blank" href="https://copypastecharacter.com/all-characters">> Copy Paste Character</a> // copy and paste special characters.<br>
+  <a target="_blank" href="https://www.fontchanger.net">> Font Changer</a> // copy and paste text with different fonts.<br>
+  <a target="_blank" href="https://emojicombos.com/">> Emoji Combos</a> // copy and paste text art.<br>
+  <a target="_blank" href="https://16colo.rs/">> 16colors</a> // user-created ASCII/ANSI art.<br>
+<p>[ M A P S ]</p>
+  <a target="_blank" href="https://earth.nullschool.net/#current/wind/surface/level/">> earth</a> // earth.<br>
+  <a target="_blank" href="https://www.windy.com/">> Windy</a> // wind.<br>
+  <a target="_blank" href="https://www.lightningmaps.org/">> Lightning Map</a> // & fire.<br>
+  <a target="_blank" href="https://earthquake.usgs.gov/earthquakes/map/">> Latest Earthquakes</a> // EARFQUAKE<br>
+  <a target="_blank" href="https://www.lightpollutionmap.info/">> Light Pollution Map</a> // light pollution.<br>
+  <a target="_blank" href="https://www.flightradar24.com/">> FlightRadar24</a> // air traffic tracker.<br>
+  <a target="_blank" href="https://www.marinetraffic.com/en/ais/home/">> MarineTraffic</a> // marine ships tracker.<br>
+  <a target="_blank" href="https://www.inaturalist.org/observations?place_id=any&subview=map">> iNaturalist</a> // animal and plant species in certain locations.<br>
+  <a target="_blank" href="https://dinosaurpictures.org/ancient-earth#170">> Ancient Earth Globe</a> // how earth looked millions of years ago.<br>
+  <a target="_blank" href="https://nuclearsecrecy.com/nukemap/">> NUKEMAP</a> // simulate the effects of a nuclear bomb.<br>
+  <a target="_blank" href="https://www.mapcrunch.com/">> MapCrunch</a> // random street views from all around the world.<br>
+  <a target="_blank" href="https://random.earth/">> random.earth</a> // random screenshots of Google Earth.<br>
+<p>[ M I S C E L L A N E O U S ]</p>
+  <a target="_blank" href="https://thenewoil.org/en/">> The New Oil</a> // beginners guides to improving online privacy and security.<br>
+  <a target="_blank" href="https://www.privacyguides.org/en/">> Privacy Guides</a> // another privacy guide with helpful tools.<br>
+  <a target="_blank" href="https://ssd.eff.org/">> Surveillance Self-Defense</a> // guide to protecting yourself from electronic surveillance.<br>
+  <a target="_blank" href="https://www.photopea.com">> Photopea</a> // in-browser alternative to Photoshop.<br>
+  <a target="_blank" href="https://www2.lunapic.com/editor/">> LunaPic</a> // online image editor.<br>
+  <a target="_blank" href="https://www.remove.bg">> remove.bg</a> // remove the background of an image.<br>
+  <a target="_blank" href="https://cleanup.pictures">> cleanup.pictures</a> // remove unwanted objects from images.<br>
+  <a target="_blank" href="https://ezgif.com">> ezgif</a> // online gif maker and editor.<br>
+  <a target="_blank" href="https://www.typelit.io/">> TypeLit.io</a> // practice typing alongside your favorite books.<br>
+  <a target="_blank" href="https://www.fantasynamegenerators.com">> Fantasy Name Generator</a> // generate a fake name.<br>
+  <a target="_blank" href="https://x6ud.github.io/#/">> Animal Photo Art References Search</a> // study animal anatomy.<br>
+  <a target="_blank" href="http://www.opentopia.com/">> Opentopia</a> // live webcam footage from around the world.<br>
+  <a target="_blank" href="https://thispersondoesnotexist.com/">> This Person Does Not Exist</a> // generates AI images of people who don't exist.<br>
+  <a target="_blank" href="https://pointerpointer.com/">> Pointer Pointer</a> // shows an image that points to wherever your cursor is.<br>
+  
+</div>  
+
+  <p>>_</p>
+  <br>
+  <a target="_self" href="index.html">>> END</a>
+  
+  <footer style="text-align:center;">RobcOS v.69<br>(C)2076 Robco</footer>
+</body>
+</html>

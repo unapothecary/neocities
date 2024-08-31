@@ -1,1 +1,596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unapothecary</title>
+    <link rel="icon" type="image/x-icon" href="design/moon.ico">
 
+<style>
+@font-face {
+  font-family: CyberpunkWaifus;
+  src: url('design/CyberpunkWaifus.ttf');
+    }
+
+* {
+  box-sizing: border-box;
+  cursor: url("design/devilcursor.png"), default;
+    }
+
+body {
+  background-image: url("design/background1.gif");
+  font-family: 'CyberpunkWaifus';
+  background-color: #000000;
+  color: #ffffff;
+    }
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+    }
+    
+h1, h2, h3, p, a, li, ul {
+  padding: 0;
+  margin: 0;
+    }
+    
+h1, h2, h3 {
+  padding-bottom: 15px;
+    }
+    
+ul {
+  list-style-type: '⟡';
+  padding-left: 10px;
+  display: inline-block;
+    }
+    
+table { 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+    }
+
+.container {
+  margin: auto;
+  padding: 10px;
+  width: 900px;
+  position: relative;
+    }
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+    }
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+    }
+
+.left {
+  float: left;
+  width: 20%;
+    }
+    
+.left a, .footer a {
+  cursor: url("design/devilcursor.png"), default;
+  text-decoration: none;
+  color: #ffffff;
+    }
+  
+.left a:hover, .footer a:hover {
+  cursor: url("design/devilcursor.png"), default;
+  color: #a86ffa;
+    }
+
+.right {
+  float: left;
+  width: 80%;
+  padding-left: 10px;
+    }
+
+.right a {
+  cursor: url("design/devilcursor.png"), default;
+  color: #a86ffa;
+    }
+    
+.right a:hover {
+  cursor: url("design/devilcursor.png"), default;
+  color: #643db5;
+    }
+
+.block {
+  background-color: #000000;
+  margin-top: 10px;
+  padding: 15px;
+  border: 1px solid #373737;
+  border-radius: 3px;
+    }
+    
+.empty {
+  margin-top: 10px;
+    }
+    
+.followers {
+  margin-top: 10px;
+    }
+    
+.followers a {
+  color: #ffffff;
+  text-decoration: none;
+    }
+    
+.followers a:hover {
+  color: #a86ffa;
+  text-decoration: none;
+    }
+
+.footer {
+  text-align: center;
+  margin-top: 10px;
+    }
+    
+::-moz-selection {
+  color: #000000;
+  background: #a86ffa;
+}
+
+::selection {
+  color: #000000;
+  background: #a86ffa;
+}
+</style>
+
+  </head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+  <img src="design/logo.png" width="500" height="68">
+</div>
+
+  <div class="left">
+  
+    <div class="block">
+      <img src="design/radioactiverat.gif" style="margin-bottom: 5px;">
+      <br>
+        <p id="dateDisplay" style="text-align: center; font-size: small;"></p>
+        <script>
+          const currentDate = new Date();
+          const options = { year: 'numeric', month: 'long', day: 'numeric' };
+          const formattedDate = currentDate.toLocaleDateString(undefined, options);
+          window.onload = function() {
+          document.getElementById('dateDisplay').textContent = formattedDate;
+            };
+        </script>
+        <p id="time" style="text-align: center; font-size: small;"></p>
+        <script>
+          function displayTime() {
+          var date = new Date();
+          var hours = date.getHours();
+          var minutes = date.getMinutes();
+          var ampm = hours >= 12 ? 'PM' : 'AM';
+          hours = hours % 12;
+          hours = hours ? hours : 12;
+          minutes = minutes < 10 ? '0' + minutes : minutes;
+          var time = hours + ':' + minutes + ' ' + ampm;
+          document.getElementById('time').textContent = time;
+            }
+          setInterval(displayTime, 1000);
+        </script>
+        <p style="text-align: center; margin-bottom: -5px; font-size: small;">mood:<a href="https://www.imood.com/users/unapothecary"><img src="https://moods.imood.com/display/uname-unapothecary/fg-ffffff/trans-1/imood.gif" border="0"></a></p>
+    </div>
+    
+    <div class="block">
+      <h2 style="text-align: center;">directory</h2>
+        <ul>
+          <li><a target="_self" href="https://unapothecary.neocities.org/index.html">&nbsp;home</a></li>
+          <li><a target="_self" href="https://unapothecary.neocities.org/about.html">&nbsp;about</a></li>
+          <li><a target="_self" href="https://unapothecary.neocities.org/websites.html">&nbsp;websites</a></li>
+          <li><a target="_self" href="https://unapothecary.neocities.org/graphics.html">&nbsp;graphics</a></li>
+          <li><a target="_self" href="https://unapothecary.neocities.org/music.html">&nbsp;music</a></li>
+        </ul>
+        <p style="float: right; margin-top: 40px"><img src="design/crystalball.gif"></p>
+    </div>
+    
+    <div class="block">
+      <p style="text-align:center;"><img src="design/unapothecarybutton.gif"></p><br>
+        <textarea style = "background-color:black;color:white;max-width:100%;">
+          <a href="https://unapothecary.neocities.org" target="_blank"><img src="https://unapothecary.neocities.org/design/unapothecarybutton.gif"></a>
+        </textarea>
+    </div>
+    
+    <div class="empty">
+      <marquee behavior="alternate" direction="up" height="200px" style="text-align: center;">
+        <img src="design/blinkies/blinkie1.gif">
+        <img src="design/blinkies/blinkie2.gif">
+        <img src="design/blinkies/blinkie3.gif">
+        <img src="design/blinkies/blinkie4.gif">
+        <img src="design/blinkies/blinkie5.gif">
+        <img src="design/blinkies/blinkie6.gif">
+        <img src="design/blinkies/blinkie7.gif">
+        <img src="design/blinkies/blinkie8.gif">
+        <img src="design/blinkies/blinkie9.gif">
+        <img src="design/blinkies/blinkie10.gif">
+        <img src="design/blinkies/blinkie11.gif">
+        <img src="design/blinkies/blinkie12.gif">
+        <img src="design/blinkies/blinkie13.gif">
+        <img src="design/blinkies/blinkie14.gif">
+        <img src="design/blinkies/blinkie15.gif">
+        <img src="design/blinkies/blinkie16.gif">
+        <img src="design/blinkies/blinkie17.gif">
+        <img src="design/blinkies/blinkie18.gif">
+        <img src="design/blinkies/blinkie19.gif">
+        <img src="design/blinkies/blinkie20.gif">
+        <img src="design/blinkies/blinkie21.gif">
+        <img src="design/blinkies/blinkie22.gif">
+        <img src="design/blinkies/blinkie23.gif">
+        <img src="design/blinkies/blinkie24.gif">
+        <img src="design/blinkies/blinkie25.gif">
+        <img src="design/blinkies/blinkie26.gif">
+        <img src="design/blinkies/blinkie27.gif">
+        <img src="design/blinkies/blinkie28.gif">
+        <img src="design/blinkies/blinkie29.gif">
+        <img src="design/blinkies/blinkie30.gif">
+        <img src="design/blinkies/blinkie31.gif">
+        <img src="design/blinkies/blinkie32.gif">
+        <img src="design/blinkies/blinkie33.gif">
+        <img src="design/blinkies/blinkie34.gif">
+        <img src="design/blinkies/blinkie35.gif">
+        <img src="design/blinkies/blinkie36.gif">
+        <img src="design/blinkies/blinkie37.gif">
+        <img src="design/blinkies/blinkie38.gif">
+        <img src="design/blinkies/blinkie39.gif">
+        <img src="design/blinkies/blinkie40.gif">
+        <img src="design/blinkies/blinkie41.gif">
+        <img src="design/blinkies/blinkie42.gif">
+        <img src="design/blinkies/blinkie43.gif">
+        <img src="design/blinkies/blinkie44.gif">
+        <img src="design/blinkies/blinkie45.gif">
+        <img src="design/blinkies/blinkie46.gif">
+        <img src="design/blinkies/blinkie47.gif">
+        <img src="design/blinkies/blinkie48.gif">
+        <img src="design/blinkies/blinkie49.gif">
+        <img src="design/blinkies/blinkie50.gif">
+        <img src="design/blinkies/blinkie51.gif">
+        <img src="design/blinkies/blinkie52.gif">
+        <img src="design/blinkies/blinkie53.gif">
+        <img src="design/blinkies/blinkie54.gif">
+        <img src="design/blinkies/blinkie55.gif">
+        <img src="design/blinkies/blinkie56.gif">
+        <img src="design/blinkies/blinkie57.gif">
+        <img src="design/blinkies/blinkie58.gif">
+        <img src="design/blinkies/blinkie59.gif">
+        <img src="design/blinkies/blinkie60.gif">
+        <img src="design/blinkies/blinkie61.gif">
+        <img src="design/blinkies/blinkie62.gif">
+        <img src="design/blinkies/blinkie63.gif">
+        <img src="design/blinkies/blinkie64.gif">
+        <img src="design/blinkies/blinkie65.gif">
+        <img src="design/blinkies/blinkie66.gif">
+        <img src="design/blinkies/blinkie67.gif">
+        <img src="design/blinkies/blinkie68.gif">
+        <img src="design/blinkies/blinkie69.gif">
+        <img src="design/blinkies/blinkie70.gif">
+        <img src="design/blinkies/blinkie71.gif">
+        <img src="design/blinkies/blinkie72.gif">
+        <img src="design/blinkies/blinkie73.gif">
+        <img src="design/blinkies/blinkie74.gif">
+        <img src="design/blinkies/blinkie75.gif">
+        <img src="design/blinkies/blinkie76.gif">
+        <img src="design/blinkies/blinkie77.gif">
+        <img src="design/blinkies/blinkie78.gif">
+        <img src="design/blinkies/blinkie79.gif">
+        <img src="design/blinkies/blinkie80.gif">
+        <img src="design/blinkies/blinkie81.gif">
+        <img src="design/blinkies/blinkie82.gif">
+        <img src="design/blinkies/blinkie83.gif">
+        <img src="design/blinkies/blinkie84.gif">
+        <img src="design/blinkies/blinkie85.gif">
+        <img src="design/blinkies/blinkie86.gif">
+        <img src="design/blinkies/blinkie87.gif">
+        <img src="design/blinkies/blinkie88.gif">
+        <img src="design/blinkies/blinkie89.gif">
+        <img src="design/blinkies/blinkie90.gif">
+        <img src="design/blinkies/blinkie91.gif">
+        <img src="design/blinkies/blinkie92.gif">
+        <img src="design/blinkies/blinkie93.gif">
+        <img src="design/blinkies/blinkie94.gif">
+        <img src="design/blinkies/blinkie95.gif">
+        <img src="design/blinkies/blinkie96.gif">
+        <img src="design/blinkies/blinkie97.gif">
+        <img src="design/blinkies/blinkie98.gif">
+        <img src="design/blinkies/blinkie99.gif">
+        <img src="design/blinkies/blinkie100.gif">
+        <img src="design/blinkies/blinkie101.gif">
+        <img src="design/blinkies/blinkie102.gif">
+        <img src="design/blinkies/blinkie103.gif">
+      </marquee>
+    </div>
+    
+    <div class="block">
+      <p>visits:<span id="hitcount" style="float: right;"></span><br></p>
+      <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var site_data = JSON.parse(this.responseText);
+            var num_arr = site_data.info.views.toString().split("");
+            var num_str = "";
+            for (i = 0; i < num_arr.length; i++) {
+              num_str += num_arr[i];
+              if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+              var date_str = site_data.info.last_updated;
+              var date_obj = new Date(site_data.info.last_updated);
+              document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "/" + date_obj.getDate() + "/" + date_obj.getFullYear();
+              }
+            document.getElementById("hitcount").innerHTML = num_str;
+            }
+          };
+        xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=unapothecary", true);
+        xhttp.send();
+      </script>
+    </div>
+    
+    <div class="block">
+      <h3 style="text-align:center;">webrings</h3>
+        <p style="text-align:center;">
+          <a target="_blank" href="https://hotlinewebring.club/unapothecary/previous"><--</a><br>
+          <a target="_blank" href="https://hotlinewebring.club">hotline webring</a><br>
+          <a target="_blank" href="https://hotlinewebring.club/unapothecary/next">--></a><br>
+        </p>
+        <br>
+          <p style="text-align:center;">
+            <a href='https://webring.dinhe.net/prev/https://unapothecary.neocities.org'><--</a><br>
+            <a target="_blank" href="http://webring.dinhe.net">retronaut webring</a><br>
+            <a href='https://webring.dinhe.net/next/https://unapothecary.neocities.org'>--></a><br>
+          </p>
+        <br>
+          <p style="text-align:center;">
+            <script src="https://nuthead.neocities.org/ring/ring.js"></script>
+          </p>
+    </div>
+    
+    <div class="block">
+      <h2 style="text-align: center;">socials</h2>
+        <ul>
+          <li><a target="_blank" href="https://neocities.org/site/unapothecary">&nbsp;neocities</a></li>
+          <li><a target="_blank" href="https://www.pinterest.com/unapothecary/">&nbsp;pinterest</a></li>
+          <li><a target="_blank" href="https://unapothecary.tumblr.com">&nbsp;tumblr</a></li>
+          <li><a target="_blank" href="https://www.tiktok.com/@unapothecary?_t=8kSOq7xvNNr&_r=1">&nbsp;tiktok</a></li>
+          <li><a target="_blank" href="https://www.instagram.com/alixrayann/">&nbsp;instagram</a></li>
+          <li><a target="_blank" href="https://twitter.com/unapothecary">&nbsp;twitter</a></li>
+        </ul>
+        <p style="text-align:center;"><img src="design/skullbook.gif"></p>
+    </div>
+    
+    <div class="block">
+      <div id="contain_moon" style="text-align:center;"><div style="font-weight:bold"></div><div style="margin-bottom:15px;filter:drop-shadow(0 0 30px hsl(220,100%,15%))"></div><div>.</div><div style="font-size:small">.</div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&t&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="next full moon:<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
+    </div>
+
+  </div>
+  
+  <div class="right">
+  
+    <div class="block">
+      <h2>welcome, traveler.<img src="design/open24hours.gif" style="float:right;"></h2>
+      <br>
+      <p>hello! welcome to my realm of cyberspace...<br><br>this site is a tribute to the early stages of the internet. it's used to keep all my favorite internet things organized for myself and to share with others. i also come here to practice my HTML and CSS and meet new people. if you're reading this, pls leave me a message in my chatbox or guestbook so i can check out your website! :3 (please oh my god im begging you please)<br><br>thanks for visiting!</p>
+    </div>
+    
+    <div class="block">
+      <h2 style="text-align:center;">✧ my stats ✧<img src="design/leftangel.gif" style="float:left; padding-left:15px; padding-top: 15px;"><img src="design/rightangel.gif" style="float:right; padding-right: 15px; padding-top: 15px;"></h2>
+          <table>
+            <tr>
+              <td><b>name:</b></td>
+              <td>alix</td>
+            </tr>
+            <tr>
+              <td><b>age:</b></td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td><b>location:</b></td>
+              <td>hell</td>
+            </tr>
+            <tr>
+              <td><b>zodiac:</b></td>
+              <td>capricorn ♑︎</td>
+            </tr>
+            <tr>
+              <td><b>fav color:</b></td>
+              <td>black</td>
+            </tr>
+            <tr>
+              <td><b>fav season:</b></td>
+              <td>fall</td>
+            </tr>
+          </table>
+          <br><br>
+      <h3 style="text-align: center;">things i like <3</h3>
+        <ul>
+          <li>&nbsp;shiba inus</li>
+          <li>&nbsp;coffee</li>
+          <li>&nbsp;thrifting</li>
+          <li>&nbsp;the moon</li>
+          <li>&nbsp;horror movies</li>
+          <li>&nbsp;skyrim</li>
+          <li>&nbsp;vinyls/cds</li>
+        </ul>
+        <ul style="padding-left:20px;">
+          <li>&nbsp;computers</li>
+          <li>&nbsp;skulls</li>
+          <li>&nbsp;vaporwave</li>
+          <li>&nbsp;new vegas</li>
+          <li>&nbsp;books</li>
+          <li>&nbsp;tights</li>
+          <li>&nbsp;cryptids</li>
+        </ul>
+        <ul style="padding-left:20px;">
+          <li>&nbsp;dark academia</li>
+          <li>&nbsp;concerts</li>
+          <li>&nbsp;antique stores</li>
+          <li>&nbsp;rats</li>
+          <li>&nbsp;dr pepper</li>
+          <li>&nbsp;classic rock</li>
+          <li>&nbsp;skirts</li>
+        </ul>
+        <ul style="padding-left:20px;">
+          <li>&nbsp;sanrio</li>
+          <li>&nbsp;emo bands</li>
+          <li>&nbsp;swords</li>
+          <li>&nbsp;history</li>
+          <li>&nbsp;the internet</li>
+          <li>&nbsp;bears</li>
+          <li>&nbsp;cyberpunk</li>
+        </ul>
+        <ul style="padding-left:20px;">
+          <li>&nbsp;trinkets</li>
+          <li>&nbsp;retro tech</li>
+          <li>&nbsp;cemeteries</li>
+          <li>&nbsp;sweaters</li>
+          <li>&nbsp;garlic bread</li>
+          <li>&nbsp;rain</li>
+          <li>&nbsp;pixel art</li>
+        </ul>
+    </div>
+    
+    <div class="empty">
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const log = console.log,
+        array = ["design/ads/fakead1.gif", "design/ads/fakead2.gif", "design/ads/fakead3.gif", "design/ads/fakead4.gif", "design/ads/fakead5.gif", "design/ads/fakead6.gif", "design/ads/fakead7.gif", "design/ads/fakead8.gif", "design/ads/fakead9.gif", "design/ads/fakead10.gif", "design/ads/fakead11.gif", "design/ads/fakead12.gif", "design/ads/fakead13.gif", "design/ads/fakead14.gif", "design/ads/fakead15.gif", "design/ads/fakead16.gif", "design/ads/fakead17.gif", "design/ads/fakead18.gif", "design/ads/fakead19.gif", "design/ads/fakead20.gif", "design/ads/fakead21.gif", "design/ads/fakead22.gif", "design/ads/fakead23.gif", "design/ads/fakead24.gif", "design/ads/fakead25.gif", "design/ads/fakead26.gif", "design/ads/fakead27.gif", "design/ads/fakead28.gif"],
+        random = Math.floor(Math.random() * array.length),
+        target = document.getElementById("target");
+        target.src = `${array[random]}`;
+        log(target);
+          });
+      </script>
+      <p style="text-align:center;"><img id="target" src="" style="width: 100%;"></p>
+    </div>
+    
+    <div class="block">
+      <h2 style="text-align:center;">??? logbook ???</h2>
+        <p style="height: 150px; overflow-y: scroll;">
+        7/8/24 - removed guestbook and added some graphics.<br>
+        3/9/24 - fixed some outdated/broken stuff.<br>
+        12/12/23 - changed the selected text color on some pages.<br>
+        9/29/23 - added a page to show off gifs and other web graphics i've saved but haven't had room for, styled like Windows XP. check it out <a href="graphics.html">here.</a><br>
+        8/12/23 - added some custom cursors for each page.<br>
+        7/20/23 - reorganized the websites page into more categories.<br>
+        6/19/23 - added fake "ads" that change every time my homepage is opened or refreshed.<br>
+        6/18/23 - fixed broken marquee effect in sidebar lol.<br>
+        6/7/23 - added an about me page that looks like a myspace profile. you can check it out <a href="about.html">here.</a><br>
+        5/25/23 - added a script that counts all links on the websites page.<br>
+        5/21/23 - added some web buttons with marquee effects.<br>
+        5/5/23 - added a page dedicated to music. check it out <a href="music.html">here.</a><br>
+        5/4/23 - added a moon phases widget to the sidebar.<br>
+        5/2/23 - created my own 88x31 button.<br>
+        4/26/23 - websites page has a new CSS layout inspired by fallout terminals. check it out <a href="websites.html">here.</a><br>
+        <img src="design/ratgrooming.gif" style="float: right;">
+        </p>
+        <br>
+        <p style="text-align:center;"><img src="design/sword1.gif"></p>
+        <br>
+        <p style="text-align:center;">last updated: <span id="lastupdate"></span></p>
+    </div>
+    
+    <div class="empty">
+      <marquee behavior="alternate" direction="left">
+        <img src="design/buttons/button1.gif">
+        <img src="design/buttons/button2.gif">
+        <img src="design/buttons/button3.gif">
+        <img src="design/buttons/button4.gif">
+        <img src="design/buttons/button5.gif">
+        <img src="design/buttons/button6.gif">
+        <img src="design/buttons/button7.gif">
+        <img src="design/buttons/button8.gif">
+        <img src="design/buttons/button9.gif">
+        <img src="design/buttons/button10.gif">
+        <img src="design/buttons/button11.gif">
+        <img src="design/buttons/button12.gif">
+        <img src="design/buttons/button13.gif">
+        <img src="design/buttons/button14.gif">
+        <img src="design/buttons/button15.gif">
+        <img src="design/buttons/button16.gif">
+        <img src="design/buttons/button17.gif">
+        <img src="design/buttons/button18.gif">
+        <img src="design/buttons/button19.gif">
+        <img src="design/buttons/button20.gif">
+        <img src="design/buttons/button21.gif">
+        <img src="design/buttons/button22.gif">
+        <img src="design/buttons/button23.gif">
+      </marquee>
+      <marquee behavior="alternate" direction="right">
+        <img src="design/buttons/button24.gif">
+        <img src="design/buttons/button25.gif">
+        <img src="design/buttons/button26.gif">
+        <img src="design/buttons/button27.gif">
+        <img src="design/buttons/button28.gif">
+        <img src="design/buttons/button29.gif">
+        <img src="design/buttons/button30.gif">
+        <img src="design/buttons/button31.gif">
+        <img src="design/buttons/button32.gif">
+        <img src="design/buttons/button33.gif">
+        <img src="design/buttons/button34.gif">
+        <img src="design/buttons/button35.gif">
+        <img src="design/buttons/button36.gif">
+        <img src="design/buttons/button37.gif">
+        <img src="design/buttons/button38.gif">
+        <img src="design/buttons/button39.gif">
+        <img src="design/buttons/button40.gif">
+        <img src="design/buttons/button41.gif">
+        <img src="design/buttons/button42.gif">
+        <img src="design/buttons/button43.gif">
+        <img src="design/buttons/button44.gif">
+        <img src="design/buttons/button45.gif">
+        <img src="design/buttons/button46.gif">
+      </marquee>
+      <marquee behavior="alternate" direction="left">
+        <img src="design/buttons/button47.gif">
+        <img src="design/buttons/button48.gif">
+        <img src="design/buttons/button49.gif">
+        <img src="design/buttons/button50.gif">
+        <img src="design/buttons/button51.gif">
+        <img src="design/buttons/button52.gif">
+        <img src="design/buttons/button53.gif">
+        <img src="design/buttons/button54.gif">
+        <img src="design/buttons/button55.gif">
+        <img src="design/buttons/button56.gif">
+        <img src="design/buttons/button57.gif">
+        <img src="design/buttons/button58.gif">
+        <img src="design/buttons/button59.gif">
+        <img src="design/buttons/button60.gif">
+        <img src="design/buttons/button61.gif">
+        <img src="design/buttons/button62.gif">
+        <img src="design/buttons/button63.gif">
+        <img src="design/buttons/button64.gif">
+        <img src="design/buttons/button65.gif">
+        <img src="design/buttons/button66.gif">
+        <img src="design/buttons/button67.gif">
+        <img src="design/buttons/button68.gif">
+        <img src="design/buttons/button69.gif">
+      </marquee>
+    </div>
+    
+    <div class="block">
+      <h2 style="text-align:center;">chatbox ʕ •ᴥ•ʔ</h2>
+      <iframe src="https://www3.cbox.ws/box/?boxid=3526519&boxtag=3mdMil" width="100%" height="350" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+      <p style="text-align:center;"><a href="https://unapothecary.123guestbook.com/" target="_blank">rip 123guestbook :(</a></p>
+    </div>
+    
+  </div>
+  
+</div>
+
+<div class="footer">
+  <p>1-800-UNAPOTHECARY<br></p>
+  <p>CALL NOW !!!<br></p>
+</div>
+
+</body>
+</html>
