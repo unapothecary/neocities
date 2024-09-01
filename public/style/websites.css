@@ -1,14 +1,14 @@
 @font-face {
   font-family: Fixedsys;
-  src: url('design/Fixedsys.ttf');
+  src: url('../design/Fixedsys.ttf');
     }
     
 * {
-  cursor: url("design/greencursor.png"), default;
+  cursor: url("../design/greencursor.png"), default;
     }
     
 body {
-  cursor: url("design/greencursor.png"), default;
+  cursor: url("../design/greencursor.png"), default;
   font-family: 'Fixedsys';
   margin: 100px;
   background-color: #111111;
@@ -20,13 +20,13 @@ hr {
     }
   
 a {
-  cursor: url("design/greencursor.png"), default;
+  cursor: url("../design/greencursor.png"), default;
   text-decoration: none;
   color: #00FF00
     }
   
 a:hover { 
-  cursor: url("design/greencursor.png"), default;
+  cursor: url("../design/greencursor.png"), default;
   background-color: #00FF00;
   color: #111111;
     }
