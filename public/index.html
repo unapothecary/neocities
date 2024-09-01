@@ -235,8 +235,17 @@
     </div>
 
     <div class="footer">
-      <p>1-800-UNAPOTHECARY<br></p>
-      <p>CALL NOW <blink>!!!</blink><br></p>
+      <p>1-800-UNAPOTHECARY</p><br>
+      <p>CALL NOW </p><p id="blink">!!!</p><br>
+        <script type="text/javascript">
+          let blink =
+            document.getElementById('blink');
+
+          setInterval(function () {
+            blink.style.opacity =
+              (blink.style.opacity == 0 ? 1 : 0);
+            }, 1000); 
+        </script>
       <hr>
       <p>made with h8</p>
       <p>hosted on <a target="_blank" href="https://neocities.org/site/unapothecary">neocities</a></p>
