@@ -1,1 +1,23 @@
-
+body {
+  background-color: #BE996E;
+  margin: 0;
+  padding: 0;
+    }
+        
+.container {
+  display: flex;
+    }
+        
+.sidebar {
+  background-color: #738054;
+  width: 200px;
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
+    }
+        
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 200px;
+    }
