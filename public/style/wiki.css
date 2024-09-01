@@ -1,8 +1,9 @@
-body { 
+body {
     color: #202122; 
     background: #f6f6f6; 
     font-family: san-serif;
       }
+
 main { 
     margin: 25px auto; 
     padding: 1.5rem; 
@@ -10,24 +11,29 @@ main {
     background: #fff; 
     border: 1px solid #a7d7f9; 
       }
-  h1 { 
+
+h1 { 
     margin-bottom: 20px; 
     padding-bottom: 10px; 
     font-family: 'Times',serif; 
     border-bottom: 1px solid #a2a9b1; 
       }
-  h2 { 
+
+h2 { 
     font-size: 1.5rem; 
     font-weight: bold; 
       }
-  ul li { 
+
+ul li { 
     margin-left: -0.5rem; 
     padding-left: 0.5rem; 
       }
-  a { 
+
+a { 
     color: #0645ad; 
     text-decoration: none; 
       }
-  a:hover { 
+
+a:hover { 
     -decoration: underline; 
       }
