@@ -1,15 +1,15 @@
 @font-face {
   font-family: CyberpunkWaifus;
-  src: url('./design/CyberpunkWaifus.ttf');
+  src: url('../design/CyberpunkWaifus.ttf');
     }
 
 * {
   box-sizing: border-box;
-  cursor: url("./design/devilcursor.png"), default;
+  cursor: url("../design/devilcursor.png"), default;
     }
 
 body {
-  background-image: url("./design/background1.gif");
+  background-image: url("../design/background1.gif");
   font-family: 'CyberpunkWaifus';
   background-color: #000000;
   color: #ffffff;
@@ -66,13 +66,13 @@ table {
     }
     
 .left a, .footer a {
-  cursor: url("./design/devilcursor.png"), default;
+  cursor: url("../design/devilcursor.png"), default;
   text-decoration: none;
   color: #ffffff;
     }
   
 .left a:hover, .footer a:hover {
-  cursor: url("./design/devilcursor.png"), default;
+  cursor: url("../design/devilcursor.png"), default;
   color: #a86ffa;
     }
 
@@ -83,12 +83,12 @@ table {
     }
 
 .right a {
-  cursor: url("./design/devilcursor.png"), default;
+  cursor: url("../design/devilcursor.png"), default;
   color: #a86ffa;
     }
     
 .right a:hover {
-  cursor: url("./design/devilcursor.png"), default;
+  cursor: url("../design/devilcursor.png"), default;
   color: #643db5;
     }
 
@@ -124,12 +124,12 @@ table {
     }
 
 .footer a {
-  cursor: url("./design/devilcursor.png"), default;
+  cursor: url("../design/devilcursor.png"), default;
   color: #a86ffa;
     }
 
 .footer a:hover {
-  cursor: url("./design/devilcursor.png"), default;
+  cursor: url("../design/devilcursor.png"), default;
   color: #643db5;
     }
     
