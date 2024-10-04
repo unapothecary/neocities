@@ -177,35 +177,36 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-        const scrollContainer = document.querySelector(".scroll-container");
-        const scrollContent = document.getElementById("scrollContent");
-    
-        let scrollDirection = 1;  // 1 means scroll down, -1 means scroll up
-        let speed = 1;  // Speed of scrolling
-        let position = 0;  // Current position of the scrollContent
-    
-        function scrollImages() {
-            const containerHeight = scrollContainer.offsetHeight;
-            const contentHeight = scrollContent.offsetHeight;
-    
-            // Update the position
-            position += scrollDirection * speed;
-    
-            // Change direction if the content hits the top or bottom
-            if (position >= 0 || position <= -(contentHeight - containerHeight)) {
-                scrollDirection *= -1;  // Reverse direction
-            }
-    
-            // Move the scrollContent
-            scrollContent.style.transform = `translateY(${position}px)`;
-    
-            requestAnimationFrame(scrollImages);  // Call the function again on the next frame
-        }
-    
-        scrollImages();  // Start the animation
+      document.addEventListener("DOMContentLoaded", () => {
+          const scrollContainer = document.querySelector('.scroll-container');
+          const scrollContent = document.getElementById('scrollContent');
+  
+          let scrollDirection = 1;  // 1 means scrolling down, -1 means scrolling up
+          const speed = 1;  // Speed of the scrolling
+          let position = 0;
+  
+          function scrollImages() {
+              const containerHeight = scrollContainer.offsetHeight;
+              const contentHeight = scrollContent.scrollHeight;
+  
+              // Move content
+              position += scrollDirection * speed;
+  
+              // Reverse direction when it reaches the top or bottom
+              if (position >= 0 || position <= -(contentHeight - containerHeight)) {
+                  scrollDirection *= -1;  // Reverse scrolling direction
+              }
+  
+              // Apply translation to move the scrollContent
+              scrollContent.style.transform = `translateY(${position}px)`;
+  
+              // Recursively call scrollImages for continuous animation
+              requestAnimationFrame(scrollImages);
+          }
+  
+          scrollImages();  // Start scrolling the images
       });
-      </script>
+    </script>
     
     <div class="block">
       <p>visits:<span id="hitcount" style="float: right;"></span><br></p>
