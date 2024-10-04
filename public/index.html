@@ -65,6 +65,38 @@
           <a href="https://unapothecary.neocities.org" target="_blank"><img src="https://unapothecary.neocities.org/design/unapothecarybutton.gif"></a>
         </textarea>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const scrollContainer = document.querySelector('.scroll-container');
+          const scrollContent = document.getElementById('scrollContent');
+  
+          let scrollDirection = 1;  // 1 means scrolling down, -1 means scrolling up
+          const speed = 1;  // Speed of the scrolling
+          let position = 0;
+  
+          function scrollImages() {
+              const containerHeight = scrollContainer.offsetHeight;
+              const contentHeight = scrollContent.scrollHeight;
+  
+              // Move content
+              position += scrollDirection * speed;
+  
+              // Reverse direction when it reaches the top or bottom
+              if (position >= 0 || position <= -(contentHeight - containerHeight)) {
+                  scrollDirection *= -1;  // Reverse scrolling direction
+              }
+  
+              // Apply translation to move the scrollContent
+              scrollContent.style.transform = `translateY(${position}px)`;
+  
+              // Recursively call scrollImages for continuous animation
+              requestAnimationFrame(scrollImages);
+          }
+  
+          scrollImages();  // Start scrolling the images
+      });
+    </script>
     
     <div class="empty">
       <div class="scroll-container">
@@ -175,38 +207,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          const scrollContainer = document.querySelector('.scroll-container');
-          const scrollContent = document.getElementById('scrollContent');
-  
-          let scrollDirection = 1;  // 1 means scrolling down, -1 means scrolling up
-          const speed = 1;  // Speed of the scrolling
-          let position = 0;
-  
-          function scrollImages() {
-              const containerHeight = scrollContainer.offsetHeight;
-              const contentHeight = scrollContent.scrollHeight;
-  
-              // Move content
-              position += scrollDirection * speed;
-  
-              // Reverse direction when it reaches the top or bottom
-              if (position >= 0 || position <= -(contentHeight - containerHeight)) {
-                  scrollDirection *= -1;  // Reverse scrolling direction
-              }
-  
-              // Apply translation to move the scrollContent
-              scrollContent.style.transform = `translateY(${position}px)`;
-  
-              // Recursively call scrollImages for continuous animation
-              requestAnimationFrame(scrollImages);
-          }
-  
-          scrollImages();  // Start scrolling the images
-      });
-    </script>
     
     <div class="block">
       <p>visits:<span id="hitcount" style="float: right;"></span><br></p>
