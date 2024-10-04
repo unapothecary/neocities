@@ -67,39 +67,8 @@
     </div>
     
     <div class="empty">
-      <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          const scrollContainer = document.querySelector(".scroll-container");
-          const scrollContent = document.getElementById("scrollContent");
-  
-          let position = 0;
-          let scrollDirection = 1; // 1 for down, -1 for up
-          const speed = 1; // Speed of scrolling
-  
-          function scrollImages() {
-              const containerHeight = scrollContainer.offsetHeight;
-              const contentHeight = scrollContent.scrollHeight;
-  
-              // Update position
-              position += scrollDirection * speed;
-  
-              // Reverse direction when reaching top or bottom
-              if (position >= (contentHeight - containerHeight) || position <= 0) {
-                  scrollDirection *= -1;  // Reverse the scroll direction
-              }
-  
-              // Apply the transform to scroll the images
-              scrollContent.style.transform = `translateY(-${position}px)`;
-  
-              // Request the next frame
-              requestAnimationFrame(scrollImages);
-          }
-  
-          scrollImages(); // Start scrolling the images
-      });
-      </script>
       <div class="scroll-container">
-        <div class="scroll-content" id="scrollContent">
+        <div class="scroll-content">
           <img src="design/blinkies/blinkie1.gif">
           <img src="design/blinkies/blinkie2.gif">
           <img src="design/blinkies/blinkie3.gif">
@@ -206,6 +175,42 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            const scrollContainer = document.querySelector('.scroll-container');
+            const scrollContent = document.querySelector('.scroll-content');
+            let direction = 1;  // 1 for scrolling down, -1 for scrolling up
+            let speed = 1;  // The speed of the scroll, higher is faster
+            let position = 0;
+
+            // Populate images dynamically if you have them in an array
+            let images = []; // Add the list of image URLs here
+            for (let i = 0; i < 100; i++) {
+                let img = document.createElement('img');
+                img.src = `path_to_image/image_${i}.png`;  // Replace with actual paths
+                scrollContent.appendChild(img);
+            }
+
+            function scrollImages() {
+                const containerHeight = scrollContainer.offsetHeight;
+                const contentHeight = scrollContent.scrollHeight;
+
+                position += direction * speed;
+
+                // Reverse direction when we hit the top or bottom
+                if (position >= (contentHeight - containerHeight) || position <= 0) {
+                    direction *= -1;
+                }
+
+                scrollContent.style.top = -position + 'px';
+
+                requestAnimationFrame(scrollImages);
+            }
+
+            scrollImages();
+        });
+      </script>
     
     <div class="block">
       <p>visits:<span id="hitcount" style="float: right;"></span><br></p>
