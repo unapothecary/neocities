@@ -177,20 +177,126 @@
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function() {
             const scrollContainer = document.querySelector('.scroll-container');
             const scrollContent = document.querySelector('.scroll-content');
             let direction = 1;  // 1 for scrolling down, -1 for scrolling up
             let speed = 1;  // The speed of the scroll, higher is faster
             let position = 0;
 
-            // Populate images dynamically if you have them in an array
-            let images = []; // Add the list of image URLs here
-            for (let i = 0; i < 100; i++) {
-                let img = document.createElement('img');
-                img.src = `path_to_image/image_${i}.png`;  // Replace with actual paths
+            // List of images to scroll
+            const images = [
+                "design/blinkies/blinkie1.gif",
+                "design/blinkies/blinkie2.gif",
+                "design/blinkies/blinkie3.gif",
+                "design/blinkies/blinkie4.gif",
+                "design/blinkies/blinkie5.gif",
+                "design/blinkies/blinkie6.gif",
+                "design/blinkies/blinkie7.gif",
+                "design/blinkies/blinkie8.gif",
+                "design/blinkies/blinkie9.gif",
+                "design/blinkies/blinkie10.gif",
+                "design/blinkies/blinkie11.gif",
+                "design/blinkies/blinkie12.gif",
+                "design/blinkies/blinkie13.gif",
+                "design/blinkies/blinkie14.gif",
+                "design/blinkies/blinkie15.gif",
+                "design/blinkies/blinkie16.gif",
+                "design/blinkies/blinkie17.gif",
+                "design/blinkies/blinkie18.gif",
+                "design/blinkies/blinkie19.gif",
+                "design/blinkies/blinkie20.gif",
+                "design/blinkies/blinkie21.gif",
+                "design/blinkies/blinkie22.gif",
+                "design/blinkies/blinkie23.gif",
+                "design/blinkies/blinkie24.gif",
+                "design/blinkies/blinkie25.gif",
+                "design/blinkies/blinkie26.gif",
+                "design/blinkies/blinkie27.gif",
+                "design/blinkies/blinkie28.gif",
+                "design/blinkies/blinkie29.gif",
+                "design/blinkies/blinkie30.gif",
+                "design/blinkies/blinkie31.gif",
+                "design/blinkies/blinkie32.gif",
+                "design/blinkies/blinkie33.gif",
+                "design/blinkies/blinkie34.gif",
+                "design/blinkies/blinkie35.gif",
+                "design/blinkies/blinkie36.gif",
+                "design/blinkies/blinkie37.gif",
+                "design/blinkies/blinkie38.gif",
+                "design/blinkies/blinkie39.gif",
+                "design/blinkies/blinkie40.gif",
+                "design/blinkies/blinkie41.gif",
+                "design/blinkies/blinkie42.gif",
+                "design/blinkies/blinkie43.gif",
+                "design/blinkies/blinkie44.gif",
+                "design/blinkies/blinkie45.gif",
+                "design/blinkies/blinkie46.gif",
+                "design/blinkies/blinkie47.gif",
+                "design/blinkies/blinkie48.gif",
+                "design/blinkies/blinkie49.gif",
+                "design/blinkies/blinkie50.gif",
+                "design/blinkies/blinkie51.gif",
+                "design/blinkies/blinkie52.gif",
+                "design/blinkies/blinkie53.gif",
+                "design/blinkies/blinkie54.gif",
+                "design/blinkies/blinkie55.gif",
+                "design/blinkies/blinkie56.gif",
+                "design/blinkies/blinkie57.gif",
+                "design/blinkies/blinkie58.gif",
+                "design/blinkies/blinkie59.gif",
+                "design/blinkies/blinkie60.gif",
+                "design/blinkies/blinkie61.gif",
+                "design/blinkies/blinkie62.gif",
+                "design/blinkies/blinkie63.gif",
+                "design/blinkies/blinkie64.gif",
+                "design/blinkies/blinkie65.gif",
+                "design/blinkies/blinkie66.gif",
+                "design/blinkies/blinkie67.gif",
+                "design/blinkies/blinkie68.gif",
+                "design/blinkies/blinkie69.gif",
+                "design/blinkies/blinkie70.gif",
+                "design/blinkies/blinkie71.gif",
+                "design/blinkies/blinkie72.gif",
+                "design/blinkies/blinkie73.gif",
+                "design/blinkies/blinkie74.gif",
+                "design/blinkies/blinkie75.gif",
+                "design/blinkies/blinkie76.gif",
+                "design/blinkies/blinkie77.gif",
+                "design/blinkies/blinkie78.gif",
+                "design/blinkies/blinkie79.gif",
+                "design/blinkies/blinkie80.gif",
+                "design/blinkies/blinkie81.gif",
+                "design/blinkies/blinkie82.gif",
+                "design/blinkies/blinkie83.gif",
+                "design/blinkies/blinkie84.gif",
+                "design/blinkies/blinkie85.gif",
+                "design/blinkies/blinkie86.gif",
+                "design/blinkies/blinkie87.gif",
+                "design/blinkies/blinkie88.gif",
+                "design/blinkies/blinkie89.gif",
+                "design/blinkies/blinkie90.gif",
+                "design/blinkies/blinkie91.gif",
+                "design/blinkies/blinkie92.gif",
+                "design/blinkies/blinkie93.gif",
+                "design/blinkies/blinkie94.gif",
+                "design/blinkies/blinkie95.gif",
+                "design/blinkies/blinkie96.gif",
+                "design/blinkies/blinkie97.gif",
+                "design/blinkies/blinkie98.gif",
+                "design/blinkies/blinkie99.gif",
+                "design/blinkies/blinkie100.gif",
+                "design/blinkies/blinkie101.gif",
+                "design/blinkies/blinkie102.gif",
+                "design/blinkies/blinkie103.gif"
+            ];
+
+            // Populate images in the scroll content
+            images.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;  // Use the source from the images array
                 scrollContent.appendChild(img);
-            }
+            });
 
             function scrollImages() {
                 const containerHeight = scrollContainer.offsetHeight;
@@ -210,7 +316,7 @@
 
             scrollImages();
         });
-      </script>
+    </script>
     
     <div class="block">
       <p>visits:<span id="hitcount" style="float: right;"></span><br></p>
