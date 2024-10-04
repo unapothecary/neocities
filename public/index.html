@@ -17,7 +17,8 @@
 </div>
 
   <div class="left">
-  
+
+    <!--
     <div class="block">
       <img src="design/radioactiverat.gif" style="margin-bottom: 5px;">
       <br>
@@ -45,6 +46,35 @@
             }
           setInterval(displayTime, 1000);
         </script>
+        <p style="text-align: center; margin-bottom: -5px; font-size: small;">mood:<a href="https://www.imood.com/users/unapothecary"><img src="https://moods.imood.com/display/uname-unapothecary/fg-ffffff/trans-1/imood.gif" border="0"></a></p>
+    </div>
+    -->
+    <div class="block">
+      <img src="design/radioactiverat.gif" style="margin-bottom: 5px;">
+      <br>
+        <p id="dateDisplay" style="text-align: center; font-size: small;"></p>
+        <p id="time" style="text-align: center; font-size: small;"></p>
+          <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const currentDate = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = currentDate.toLocaleDateString(undefined, options);
+            document.getElementById('dateDisplay').textContent = formattedDate;
+        
+            function displayTime() {
+              const date = new Date();
+              let hours = date.getHours();
+              let minutes = date.getMinutes();
+              const ampm = hours >= 12 ? 'PM' : 'AM';
+              hours = hours % 12 || 12;
+              minutes = minutes < 10 ? '0' + minutes : minutes;
+              const time = `${hours}:${minutes} ${ampm}`;
+              document.getElementById('time').textContent = time;
+            }
+            displayTime();
+            setInterval(displayTime, 1000);
+              });
+          </script>
         <p style="text-align: center; margin-bottom: -5px; font-size: small;">mood:<a href="https://www.imood.com/users/unapothecary"><img src="https://moods.imood.com/display/uname-unapothecary/fg-ffffff/trans-1/imood.gif" border="0"></a></p>
     </div>
     
