@@ -142,3 +142,21 @@ table {
   color: #000000;
   background: #a86ffa;
 }
+
+.scroll-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-content img {
+  margin-bottom: 10px;
+}
