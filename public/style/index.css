@@ -144,22 +144,28 @@ table {
 }
 
 .marquee-container {
-  position: relative;
-  height: 100px; /* Height of the visible area */
-  overflow: hidden; /* Hide overflow */
+    position: relative;
+    height: 200px; /* Height of the visible area */
+    overflow: hidden; /* Hide overflow */
 }
 
 .marquee {
-  position: absolute;
-  width: 100%; /* Full width */
-  animation: marquee 5s linear infinite alternate; /* Animation properties */
+    position: absolute;
+    width: 100%; /* Full width */
+    animation: marquee 10s linear infinite alternate; /* Animation properties */
+}
+
+.marquee img {
+    display: block; /* Stack images */
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 @keyframes marquee {
-  0% {
-      transform: translateY(100%); /* Start from below */
-  }
-  100% {
-      transform: translateY(-100%); /* Move to above */
-  }
+    0% {
+        transform: translateY(100%); /* Start from below */
+    }
+    100% {
+        transform: translateY(-100%); /* Move to above */
+    }
 }
