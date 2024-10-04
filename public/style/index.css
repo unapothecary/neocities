@@ -148,7 +148,6 @@ table {
   height: 200px; /* The height you want for the scroll effect */
   overflow: hidden;
   position: relative;
-  border: 1px solid #ddd;
 }
 
 .scroll-content {
@@ -160,6 +159,6 @@ table {
 }
 
 .scroll-content img {
-  width: 150px; /* Set the width you need */
+  width: 100%;
   margin: 10px 0;
 }
