@@ -68,33 +68,33 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-          const scrollContainer = document.querySelector('.scroll-container');
-          const scrollContent = document.getElementById('scrollContent');
+          const scrollContainer = document.querySelector(".scroll-container");
+          const scrollContent = document.getElementById("scrollContent");
   
-          let scrollDirection = 1;  // 1 means scrolling down, -1 means scrolling up
-          const speed = 1;  // Speed of the scrolling
           let position = 0;
+          let scrollDirection = 1; // 1 for down, -1 for up
+          const speed = 1; // Speed of scrolling
   
           function scrollImages() {
               const containerHeight = scrollContainer.offsetHeight;
               const contentHeight = scrollContent.scrollHeight;
   
-              // Move content
+              // Update position
               position += scrollDirection * speed;
   
-              // Reverse direction when it reaches the top or bottom
-              if (position >= 0 || position <= -(contentHeight - containerHeight)) {
-                  scrollDirection *= -1;  // Reverse scrolling direction
+              // Reverse direction when reaching top or bottom
+              if (position >= (contentHeight - containerHeight) || position <= 0) {
+                  scrollDirection *= -1;  // Reverse the scroll direction
               }
   
-              // Apply translation to move the scrollContent
-              scrollContent.style.transform = `translateY(${position}px)`;
+              // Apply the transform to scroll the images
+              scrollContent.style.transform = `translateY(-${position}px)`;
   
-              // Recursively call scrollImages for continuous animation
+              // Request the next frame
               requestAnimationFrame(scrollImages);
           }
   
-          scrollImages();  // Start scrolling the images
+          scrollImages(); // Start scrolling the images
       });
     </script>
     
