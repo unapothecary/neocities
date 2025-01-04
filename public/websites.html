@@ -304,7 +304,16 @@ updateLinkCount();
   <a target="_blank" href="https://forum.agoraroad.com/index.php?media/">> Agora Road's Macintosh Cafe</a> // vaporwave forum.<br>
 </div>  
 
-  <p>>_</p>
+  <p>><p id="blink">_</p></p>
+  <script type="text/javascript">
+          let blink =
+            document.getElementById('blink');
+
+          setInterval(function () {
+            blink.style.opacity =
+              (blink.style.opacity == 0 ? 1 : 0);
+            }, 1000); 
+        </script>
   <br>
   <a target="_self" href="index.html">>> END</a>
   
