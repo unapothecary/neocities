@@ -11,7 +11,24 @@
 first_name = "cherry"
 last_name = ""
 who_id_like_to_meet = "exorcizamus te omnis immundus spiritus omnis satanica potestas omnis incursio infernalis adversarii omnis legio omnis congregatio et secta diabolica";
-status = "patrolling the mojave almost makes you wish for a nuclear winter";
+status = "<script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const array = [
+		"patrolling the mojave almost makes you wish for a nuclear winter.",
+		"exorcizamus te omnis immundus spiritus omnis satanica potestas omnis incursio infernalis adversarii omnis legio omnis congregatio et secta diabolica",
+		"despite everything, it's still you.",
+          ];
+          
+          const random = Math.floor(Math.random() * array.length);
+          const target = document.getElementById("target");
+          
+          if (target) {
+              target.src = array[random];
+          } else {
+              console.error('Target element not found');
+          }
+      });
+      </script>";
 profile_picture = "design/pfp.jpeg";
 gender = "";
 age = "";
